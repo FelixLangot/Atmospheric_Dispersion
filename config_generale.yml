@@ -1,0 +1,67 @@
+## Meteo
+# type de simulation: meteo constante ("constant") ou lecture d'une serie temporelle (nom du fichier a lire)
+type_vent: constant
+#/Users/felixlangot/Google Drive (felixlangot@gmail.com)/UVSQ/Modélisation/TD5 - Dispersion/TP_dispersion_ copy/sac_10m_GAUSSPY_2013_humid.txt
+
+# vitesse du vent (horizontale, m/s) si meteo constante
+vitesse: 15
+# direction du vent 0-360 (0 = vent soufflant du N, 180 = vent du S) si meteo constante
+direction: 270
+# classe de stabilite 1 - 6 si meteo constante
+stabilite: 1
+# humidite relative de l'air 0 - 1 si meteo constante
+rh: 0.9
+
+## Cheminee
+# masse emise (microg/s)
+emiss: 2.31e5
+# hauteur de la cheminee (m)
+hauteur: 48.
+# position de la cheminee (en m par rapport au centre du domaine)
+x: 0
+y: 0
+# profil temporel a utiliser: constant ou lecture de fichiers dans un repertoire dedie
+proftps: constant
+# /home/users/ipison/data02/UPSay/TP_dispersion/time_profiles/
+
+## Polluant
+#
+nu: 1 # acide organique
+# masse volumique (sec, kg/m3)
+#rho: 8650 # Cd
+#rho: 8908 # Ni
+#rho: 11340 # Pb
+rho: 2000 # poussiere
+# masse molaire (sec, kg/mole)
+#M: 0.1124 # Cd
+#M: 0.0589 # Ni
+#M: 0.2072 # Pb
+M: 0.012011 # poussiere
+# taille des particules seches (diametre en m), si aerosol
+diameter: 10e-6
+# prise en compte de l'humidification de l'aerosol: 1 = non, 2 = oui
+humid: 2
+
+## Figures
+# type de figure a dessiner: 1 = carte horizontale, 2 = coupe verticale, 3 = series temporelles, 4 = pas de figure)
+output: 1
+# pour une carte ou une coupe: concentrations a dessiner: moyenne temporelle: mean, minimum/maximum sur la période:  min/max, nombre d'occurrences de valeurs au-dessus d'un seuil: freq
+type_postproc: mean
+# valeur du seuil (en microg/m3) en cas de calcul de frequence d'occurence
+threshold: 50
+# pour une carte: niveau a partir du sol (numero de la maille, commence a 0)
+zlev: 0
+# pour une coupe verticale: choix de la direction X ou Y et position le long de l'axe
+dirslice: Y
+posslice: 25
+# pour une serie temporelle: position en x (numero de la maille, commence a 0)
+xpos: 0
+# pour une serie temporelle: position en y (numero de la maille, commence a 0)
+ypos: 0
+# pour une serie temporelle: frequence de moyennage: jour ou mois
+freqtps: jour
+# etiquette
+etiq: casetude
+# echelle de couleur: valeurs min et max (concentrations en microg/m3)
+min: 0
+max: 1642

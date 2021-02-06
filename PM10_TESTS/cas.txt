@@ -1,0 +1,40 @@
+#DEFAUT1
+vent: 5
+stabilite: 4
+rh: 0.9
+
+#VENT
+cas0.1: 0.5
+cas0.2: 1
+cas1: 2
+cas2: 5 =====> DEFAUT
+cas3: 15
+cas4: 30
+
+#STAB
+cas5: 1
+cas6: 2
+cas7: 3
+#cas: 4 =====> DEFAUT
+cas8: 5
+cas9: 6
+
+#RH
+cas10: 0
+cas11: 0.2
+cas12: 0.4
+cas13: 0.6
+cas14: 0.8
+#cas: 0.9 =====> DEFAUT
+cas15: 0.99
+
+#VENT_FAIBLE
+vent: 1
+stabilite: 4
+rh: cas2.0: 0
+    cas2.1: 0.2
+    cas2.2: 0.4
+    cas2.3: 0.6
+    cas2.4: 0.8
+    cas2.5: 0.9 
+    cas2.6: 0.99
